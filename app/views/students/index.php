@@ -29,7 +29,7 @@ ob_start();
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <h2 class="text-center mb-4">Danh sách sinh viên</h2>
         <div class="text-end mb-3">
             <a href="./Student/create" class="btn btn-primary">Thêm sinh viên mới</a>

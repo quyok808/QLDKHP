@@ -49,7 +49,11 @@ ob_start();
                             <td><?php echo $course['SoTinChi']; ?></td>
                             <td><?php echo $course['SLDK']; ?></td>
                             <td>
-                                <a href="/QLDKHP/Subject/register/<?php echo $course['MaHP']; ?>" class="btn btn-success btn-sm">Đăng kí</a>
+                                <?php if ($course['SLDK'] > 0) : ?>
+                                    <a href="/QLDKHP/Subject/register/<?php echo $course['MaHP']; ?>" class="btn btn-success btn-sm">Đăng kí</a>
+                                <?php else : ?>
+                                    <button class="btn btn-secondary btn-sm" disabled>Hết chỗ</button>
+                                <?php endif; ?>
                             </td>
                         </tr>
                     <?php endforeach; ?>

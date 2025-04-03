@@ -57,13 +57,18 @@
                         <a class="nav-link" href="/QLDKHP/Subject/registered">Đăng kí(<?php echo isset($_SESSION['countHP']) ? $_SESSION['countHP'] : 0; ?>)</a>
                     </li>
                     <li class="nav-item">
-
+                        <?php if (isset($_SESSION['maSV'])): ?>
+                            <p class="nav-link">Xin chào, <?php echo $_SESSION['maSV']; ?></p>
+                        <?php endif; ?>
+                    </li>
+                    <li class="nav-item">
                         <?php if (isset($_SESSION['maSV'])): ?>
                             <a class="nav-link" href="/QLDKHP/Auth/Logout">Đăng xuất</a>
                         <?php else: ?>
                             <a class="nav-link" href="/QLDKHP/Auth">Đăng nhập</a>
                         <?php endif; ?>
                     </li>
+
                 </ul>
             </div>
         </div>
@@ -71,7 +76,7 @@
 
     <!-- Main Content -->
     <div class="main-content">
-        <div class="container">
+        <div class="container-fluid">
             <?php
             // Nơi nội dung trang sẽ được chèn vào
             if (isset($content)) {

@@ -41,5 +41,5 @@
         </select>
     </div>
     <button type="submit" class="btn btn-primary">Cập nhật</button>
-    <a href="../Student" class="btn btn-secondary">Hủy</a>
+    <a href="/QLDKHP/Student" class="btn btn-secondary">Hủy</a>
 </form>
